@@ -1,0 +1,57 @@
+﻿ 
+<script type="text/javascript">
+    var returnUrl = 'Return Url ';
+    var applicationId = 'Facebook ID';
+
+    window.fbAsyncInit = function () {
+        window.FB.init({
+            appId: applicationId, // App ID
+            status: false, // check login status
+            cookie: false, // enable cookies to allow the server to access the session
+            xfbml: true  // parse XFBML,
+           , version: 'v2.4'
+        });
+
+
+            var finished_rendering = function () {
+                window.top.location = '/Member/Index';
+            }
+
+            // In your onload handler
+
+            window.FB.Event.subscribe("auth.logout", finished_rendering);
+
+
+
+        window.FB.Event.subscribe('auth.authResponseChange', function (response) {
+            if (response.status === 'connected') {
+                var uid = response.authResponse.userID;
+                var accessToken = response.authResponse.accessToken;
+
+                location.href = '/Social/SigninWithFacebook?accessToken=' + accessToken + '&returnURL=' + returnUrl;
+            } else if (response.status === 'not_authorized') {
+                alert(response.status);
+
+            } else {
+            }
+        });
+    };
+
+
+    (function (d) {
+        var js, id = 'facebook-jssdk';
+        if (d.getElementById(id)) {
+            return;
+        }
+        js = d.createElement('script');
+        js.id = id;
+        js.async = true;
+        js.src = "//connect.facebook.net/en_US/sdk.js";
+        d.getElementsByTagName('head')[0].appendChild(js);
+    }(document));
+
+</script>
+
+ 
+<div class="fb-login-button" scope="email">Facebook ile giriş yap</div>
+ 
