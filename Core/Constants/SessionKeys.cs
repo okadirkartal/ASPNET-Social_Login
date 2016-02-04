@@ -1,4 +1,4 @@
-﻿namespace ViewModel
+﻿namespace Core.Constants
 {
     public class SessionKeys
     {
