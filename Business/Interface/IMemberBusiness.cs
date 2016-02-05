@@ -6,7 +6,8 @@ namespace Business.Interface
 
     {
         Member GetMemberByEmail(string email);
-        Member GetMemberBySourceIdValue(string SourceIdValue);
+        Member GetMemberBySourceIdValue();
+        Member GetMemberBySourceIdValue(string sourceIdValue);
         Member GetMemberByMemberSourceIdValue(short sourceId, string sourceIdValue);
         Member UpdateMember(Member member);
     }

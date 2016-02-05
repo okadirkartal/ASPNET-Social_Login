@@ -11,12 +11,17 @@ namespace Business.Impl
             throw new NotImplementedException();
         }
 
+        public Member GetMemberBySourceIdValue()
+        {
+            throw new NotImplementedException();
+        }
+
         Member IMemberBusiness.GetMemberByMemberSourceIdValue(short sourceId, string sourceIdValue)
         {
             throw new NotImplementedException();
         }
 
-        Member IMemberBusiness.GetMemberBySourceIdValue(string SourceIdValue)
+        Member IMemberBusiness.GetMemberBySourceIdValue(string sourceIdValue)
         {
             throw new NotImplementedException();
         }

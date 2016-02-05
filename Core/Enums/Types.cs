@@ -2,7 +2,7 @@
 {
     namespace Types
     {
-        public enum MemberSourceTypes : int
+        public enum MemberSourceTypes
         {
              Web = 1,
              Facebook = 2,

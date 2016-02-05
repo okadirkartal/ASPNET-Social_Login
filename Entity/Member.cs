@@ -4,7 +4,7 @@
     {
         public Member()
         {
-            this.SourceId = 1;
+            SourceId = 1;
         }
         public int Id { get; set; }
         public string Email { get; set; }

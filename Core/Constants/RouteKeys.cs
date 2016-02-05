@@ -1,4 +1,4 @@
-﻿namespace Core.Constraints
+﻿namespace Core.Constants
 {
     public class RouteKeys
     {

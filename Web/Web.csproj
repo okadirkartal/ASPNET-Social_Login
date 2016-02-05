@@ -281,6 +281,10 @@
     <Content Include="Views\Social\FacebookLogin.cshtml" />
     <Content Include="Views\Social\Index.cshtml" />
     <Content Include="Views\Member\Index.cshtml" />
+    <None Include="Views\Social\AfterSocialLoginPage.cshtml" />
+    <None Include="Views\Social\ExternalLoginFailure.cshtml" />
+    <None Include="Views\Social\GoogleAuthorizeCallback.cshtml" />
+    <None Include="Views\Social\SigninWithFacebook.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Business\Business.csproj">
